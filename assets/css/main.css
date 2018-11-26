@@ -1,0 +1,14 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#bckVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
