@@ -1,6 +1,6 @@
-import Grid from './game/grid';
+import GridDisplayer from './game/grid';
 
 //Game grid
-const grid = new Grid();
+const gridDisplayer = new GridDisplayer();
 //Displays the grid
-grid.render();
+gridDisplayer.render();

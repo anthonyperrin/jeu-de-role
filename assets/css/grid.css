@@ -1,0 +1,9 @@
+.cell {
+    position: relative;
+    float: left;
+    border: black solid 1px;
+}
+
+.break {
+    clear: both;
+}

@@ -8,7 +8,9 @@
   },
   "author": "AnthonyPerrin",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "npm": "^6.4.1"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.4",
