@@ -8,12 +8,17 @@ import GridDisplayer from './game/grid';
 let code;
 const bckVideo = $('#bckVideo');
 const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'i', 'j'];
-$(document).on('keyup', (event) => {
-    if (event.key !== undefined) {
-        code = event.key;
-        bckVideo.fadeOut(1000, () => {
-            bckVideo.attr('src', './assets/video/cave_' + letters[Math.floor(Math.random() * Math.floor(8))] + '_HD_gridless.m4v')
-                .fadeIn(1000);
-        })
-    }
+const ev = new EventSource('http://127.0.0.1:8080/time');
+ev.addEventListener('time', function (result) {
+    changeMap();
+    console.log(result.data);
 });
+$(document).on('keyup', (event) => {
+    changeMap();
+});
+const changeMap = () => {
+    bckVideo.fadeOut(1000, () => {
+        bckVideo.attr('src', './assets/video/cave_' + letters[Math.floor(Math.random() * Math.floor(8))] + '_HD_gridless.m4v')
+            .fadeIn(1000);
+    })
+};
